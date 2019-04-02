@@ -2,7 +2,6 @@ import {
   LOAD_APPLICATIONS,
   DELETE_APPLICATION,
   SELECT_APPLICATION,
-  UPLOAD_CONFIG,
   CREATE_APPLICATION,
   IApplicationsState,
   ApplicationActionTypes,
@@ -11,10 +10,10 @@ import {
 const initialState: IApplicationsState = {
   list: [],
   selected: '',
-  config: null,
 };
 
 export default function (state = initialState, action: ApplicationActionTypes) {
+  // we cant use destructuring here because of typescript bug
   switch (action.type) {
     case LOAD_APPLICATIONS:
       return {
@@ -31,11 +30,6 @@ export default function (state = initialState, action: ApplicationActionTypes) {
       return {
         ...state,
         selected: action.payload,
-      };
-    case UPLOAD_CONFIG:
-      return {
-        ...state,
-        config: action.payload,
       };
     case CREATE_APPLICATION:
       return {

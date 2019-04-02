@@ -10,10 +10,11 @@ import {
   loadApplications,
   deleteApplication,
   selectApplication,
-  uploadConfig,
-  createApplication
 } from '../../redux/applications/actions';
-import { IApplication, IConfig } from '../../redux/applications/types';
+
+import { uploadConfig } from '../../redux/config/actions';
+import { IApplication } from '../../redux/applications/types';
+import { IConfig } from '../../redux/config/types';
 import { AppState } from '../../redux';
 
 import './style.scss';
@@ -68,7 +69,7 @@ class ApplicationSelection extends Component<IProps, IState> {
       return;
     }
 
-    this.props.history.push('/editConfig');
+    this.props.history.push('/editConfiguration');
   }
 
   editUsers = (): void => {

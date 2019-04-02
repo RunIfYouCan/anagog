@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UploadFileButton from '../../../components/UploadFileButton';
 
 import { History } from 'history';
-import { IConfig } from '../../../redux/applications/types';
+import { IConfig } from '../../../redux/config/types';
 
 interface IProps {
   isAppSelected: boolean;
@@ -32,7 +32,7 @@ export default class UploadConfigButton extends Component<IProps, null> {
       }
 
       this.props.uploadConfig(config.AnagogDefaultConfig);
-      this.props.history.push('/editConfig');
+      this.props.history.push('/editConfiguration');
     } catch (e) {
       alert('Error parsing JSON');
     }

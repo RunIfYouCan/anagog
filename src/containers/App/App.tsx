@@ -7,6 +7,8 @@ import { HEADER_ROUTS } from '../../constants';
 import Login from '../Login';
 import ApplicationSelection from '../ApplicationSelection';
 import ApplicationCreation from '../ApplicationCreation';
+import EditConfiguration from '../EditConfiguration';
+import EditUsers from '../EditUsers';
 import Header from '../../components/Header';
 
 import createStore from '../../store';
@@ -21,8 +23,10 @@ class App extends Component<object, object> {
           <div className="App">
             <Switch>
                 <Route exact path="/" component={Login}/>
-                <Route exact path="/applicationSelection" component={ApplicationSelection}/>
-                <Route exact path="/applicationCreation" component={ApplicationCreation}/>
+                <Route path="/applicationSelection" component={ApplicationSelection}/>
+                <Route path="/applicationCreation" component={ApplicationCreation}/>
+                <Route path="/editConfiguration" component={EditConfiguration} />
+                <Route path="/editUsers" component={EditUsers} />
             </Switch>
           </div>
         </Router>

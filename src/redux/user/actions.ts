@@ -5,6 +5,10 @@ import {
   USER_LOGIN_FAIL,
   USER_LOGIN,
   USER_LOGOUT,
+  LOAD_APP_USERS,
+  ADD_USER,
+  DELETE_USERS,
+  INewUser,
 } from './types';
 import { TOKEN_KEY } from '../../constants';
 
@@ -47,3 +51,42 @@ export const logout = (): ActionThunk => async (dispatch: any) => {
     alert(e);
   }
 };
+
+export const loadAppUsers = (appName: string): ActionThunk => async (dispatch) => {
+  try {
+    const users = await Api.loadUsers(appName);
+
+    dispatch({
+      type: LOAD_APP_USERS,
+      payload: users,
+    });
+  } catch (e) {
+    alert(e);
+  }
+};
+
+export const addUser = (appName: string, user: INewUser): ActionThunk => async (dispatch) => {
+  try {
+    const newUser = await Api.addUser(appName, user);
+
+    dispatch({
+      type: ADD_USER,
+      payload: newUser,
+    });
+  } catch (e) {
+    alert(e);
+  }
+}
+
+export const deleteUsers = (appName: string, ids: string[]): ActionThunk => async (dispatch) => {
+  try {
+    await Api.deleteUsers(appName, ids);
+
+    dispatch({
+      type: DELETE_USERS,
+      payload: ids,
+    });
+  } catch (e) {
+    alert(e);
+  }
+}

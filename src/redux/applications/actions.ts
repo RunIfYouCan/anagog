@@ -3,9 +3,7 @@ import {
   LOAD_APPLICATIONS,
   DELETE_APPLICATION,
   SELECT_APPLICATION,
-  UPLOAD_CONFIG,
   CREATE_APPLICATION,
-  IConfig,
 } from './types';
 
 import { ThunkAction } from 'redux-thunk';
@@ -44,13 +42,6 @@ export const selectApplication = (appName: string): ActionThunk => async (dispat
   dispatch({
     type: SELECT_APPLICATION,
     payload: appName,
-  });
-};
-
-export const uploadConfig = (config: IConfig): ActionThunk => (dispatch) => {
-  dispatch({
-    type: UPLOAD_CONFIG,
-    payload: config,
   });
 };
 

@@ -1,7 +1,7 @@
 export const HEADER_ROUTS: string[] = [
   '/applicationSelection',
   '/applicationCreation',
-  '/editConfig',
+  '/editConfiguration',
   '/editUsers',
 ];
 
