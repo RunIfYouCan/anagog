@@ -12,7 +12,6 @@ import { AppState } from '../../redux';
 
 import './style.scss';
 
-
 interface IProps {
   usersList: IUser[];
   selectedApp: string;

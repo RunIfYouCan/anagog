@@ -41,7 +41,7 @@ export default function (state = initialState, action: UserActionTypes) {
     case DELETE_USERS:
       return {
         ...state,
-        usersList: state.usersList.filter((user) => action.payload.indexOf(user.id) === -1),
+        usersList: state.usersList.filter(user => action.payload.indexOf(user.id) === -1),
       };
     case USER_LOGOUT:
       return initialState;

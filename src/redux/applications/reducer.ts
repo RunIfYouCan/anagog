@@ -23,7 +23,7 @@ export default function (state = initialState, action: ApplicationActionTypes) {
     case DELETE_APPLICATION:
       return {
         ...state,
-        list: state.list.filter((app) => app.AppName !== action.payload),
+        list: state.list.filter(app => app.AppName !== action.payload),
         selected: '',
       };
     case SELECT_APPLICATION:

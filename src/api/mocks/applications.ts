@@ -114,8 +114,8 @@ export const applications = {
             },
             {
               Build: 6,
-              Comment: 'Update schedule and profile urls and set historical reports to 60 minutes and 10 minute retry',
-
+              Comment: 'Update schedule and profile urls and set historical' +
+              'reports to 60 minutes and 10 minute retry',
             },
           ],
         },

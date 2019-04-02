@@ -8,7 +8,7 @@ import {
   SAVE_CONFIG,
   UPDATE_CONFIG,
   IConfig,
-  IConfigValues
+  IConfigValues,
 } from './types';
 
 import { ThunkAction } from 'redux-thunk';
@@ -45,20 +45,21 @@ export const loadConfig = (appName: string): ActionThunk => async (dispatch) => 
   }
 };
 
-export const updateConfig = (configValues: IConfigValues): ActionThunk => async (dispatch, getState) => {
-  try {
-    const config = defaultsDeep(formatConfigValues(configValues), getState().config.data);
+export const updateConfig = (configValues: IConfigValues): ActionThunk =>
+  async (dispatch, getState) => {
+    try {
+      const config = defaultsDeep(formatConfigValues(configValues), getState().config.data);
 
-    await Api.updateConfig(config);
+      await Api.updateConfig(config);
 
-    dispatch({
-      type: UPDATE_CONFIG,
-      payload: config,
-    });
-  } catch (e) {
-    alert(e);
-  }
-};
+      dispatch({
+        type: UPDATE_CONFIG,
+        payload: config,
+      });
+    } catch (e) {
+      alert(e);
+    }
+  };
 
 export const saveConfig = (configValues: IConfigValues): ActionThunk => (dispatch, getState) => {
   const config = formatConfigValues(configValues);
@@ -66,7 +67,7 @@ export const saveConfig = (configValues: IConfigValues): ActionThunk => (dispatc
     [JSON.stringify(config)],
     'config.json',
     { type: 'application/json' },
-    );
+  );
 
   saveAs(configFile);
 

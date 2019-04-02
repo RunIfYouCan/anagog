@@ -76,7 +76,7 @@ export const addUser = (appName: string, user: INewUser): ActionThunk => async (
   } catch (e) {
     alert(e);
   }
-}
+};
 
 export const deleteUsers = (appName: string, ids: string[]): ActionThunk => async (dispatch) => {
   try {
@@ -89,4 +89,4 @@ export const deleteUsers = (appName: string, ids: string[]): ActionThunk => asyn
   } catch (e) {
     alert(e);
   }
-}
+};

@@ -121,7 +121,7 @@ class AppForm extends Component<IProps, IState> {
               id="appName"
               placeholder="Select Application..."
             >
-              {this.props.applications.map((app) => (
+              {this.props.applications.map(app => (
                 <Option key={app.AppName} value={app.AppName}>
                   {app.AppName}
                 </Option>
@@ -159,7 +159,7 @@ class AppForm extends Component<IProps, IState> {
                 id="version"
                 placeholder="Select Version..."
               >
-                {selectedApp.Versions.map((i) => (
+                {selectedApp.Versions.map(i => (
                   <Option key={i.Version} value={i.Version}>
                     {i.Version}
                   </Option>
@@ -181,7 +181,7 @@ class AppForm extends Component<IProps, IState> {
                 id="build"
                 placeholder="Select Build..."
               >
-                {selectedVersion.Builds.map((i) => (
+                {selectedVersion.Builds.map(i => (
                   <Option key={i.Build} value={i.Build}>
                     {i.Build}
                   </Option>

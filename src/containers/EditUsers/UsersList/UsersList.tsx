@@ -13,7 +13,7 @@ function UsersList(props: IProps) {
     <div>
       <div>Users</div>
       <ul className="UsersList__list">
-        {users.map((user) => (
+        {users.map(user => (
           <li className="UsersList__item" key={user.id}>
             {user.name}
           </li>
