@@ -53,9 +53,9 @@ export interface IUser {
 
 export interface INewUser {
   name: string;
-  updateU: boolean;
-  deleteU: boolean;
-  addU: boolean;
+  updateU?: boolean;
+  deleteU?: boolean;
+  addU?: boolean;
 }
 
 export interface IUserState {

@@ -37,11 +37,12 @@
     "@types/react-dom": "16.8.3",
     "@types/react-redux": "^7.0.5",
     "@types/react-router-dom": "^4.3.1",
-    "react-test-renderer": "^16.8.5",
-    "tslint": "^5.14.0",
-    "tslint-config-airbnb": "^5.11.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
+    "react-test-renderer": "^16.8.5",
+    "redux-mock-store": "^1.5.3",
+    "tslint": "^5.14.0",
+    "tslint-config-airbnb": "^5.11.1",
     "typescript": "3.3.4000"
   }
 }

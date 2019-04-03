@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../../utils/history';
@@ -14,25 +14,23 @@ import Header from '../../components/Header';
 import createStore from '../../store';
 import './style.scss';
 
-class App extends Component<object, object> {
-  render() {
-    return (
-      <Provider store={createStore({})}>
-        <Router history={history}>
-          <Route path={HEADER_ROUTS} component={Header} />
-          <div className="App">
-            <Switch>
-                <Route exact path="/" component={Login}/>
-                <Route path="/applicationSelection" component={ApplicationSelection}/>
-                <Route path="/applicationCreation" component={ApplicationCreation}/>
-                <Route path="/editConfiguration" component={EditConfiguration} />
-                <Route path="/editUsers" component={EditUsers} />
-            </Switch>
-          </div>
-        </Router>
-      </Provider>
-    );
-  }
+function App() {
+  return (
+    <Provider store={createStore({})}>
+      <Router history={history}>
+        <Route path={HEADER_ROUTS} component={Header} />
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Login}/>
+            <Route path="/applicationSelection" component={ApplicationSelection}/>
+            <Route path="/applicationCreation" component={ApplicationCreation}/>
+            <Route path="/editConfiguration" component={EditConfiguration} />
+            <Route path="/editUsers" component={EditUsers} />
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;
