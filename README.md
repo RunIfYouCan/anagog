@@ -48,4 +48,4 @@ password: admin
 ```
 
 ## Notes
-I would like to use redux-saga for side-effects but i don't have much time to implement it.
+For better side effects, I would suggest to use redux-saga, which can be implemented within larger time period. Also with larger time period project could have more tests coverage. I have implemented several tests to show this as one of the programming practices I usually use.
