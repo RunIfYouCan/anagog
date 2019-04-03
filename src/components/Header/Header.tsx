@@ -33,7 +33,7 @@ const services: IService[] = [
   },
 ];
 
-class Header extends Component<IProps, null> {
+export class Header extends Component<IProps, null> {
   logout = async () => {
     await this.props.logout();
   }

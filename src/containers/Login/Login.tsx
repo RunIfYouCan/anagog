@@ -20,7 +20,7 @@ interface IProps {
 
 type InputEvent = React.ChangeEvent<HTMLInputElement>;
 
-class Login extends Component<IProps, IState> {
+export class Login extends Component<IProps, IState> {
   state: IState = {
     name: '',
     password: '',
