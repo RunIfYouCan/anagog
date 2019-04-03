@@ -37,6 +37,7 @@ class ConfirmDeleteModal extends Component<IProps, IState> {
         className="ConfirmDeleteModal"
         visible={visible}
         title="Are you sure?"
+        onCancel={handleClose}
         footer={[
           <Button key="delete" type="danger" onClick={this.onDelete}>
             Delete Application

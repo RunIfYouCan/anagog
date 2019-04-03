@@ -89,7 +89,7 @@ class UserForm extends Component<IProps, IState> {
           </Col>
         </Row>
         <Button
-          disabled={!!this.state.name}
+          disabled={!this.state.name}
           onClick={this.handleAddUser}
         >
           Add user

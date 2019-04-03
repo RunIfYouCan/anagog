@@ -3,7 +3,7 @@ import { Button, Row, Col } from 'antd';
 import { connect } from 'react-redux';
 
 import UserForm from './UserForm';
-// import DeleteUserModal from './DeleteUserModal';
+import DeleteUser from './DeleteUser';
 import UsersList from './UsersList';
 import { addUser, deleteUsers, loadAppUsers } from '../../redux/user/actions';
 
@@ -69,12 +69,12 @@ class EditUsers extends Component<IProps, IState> {
             </Button>
           </Col>
         </Row>
-        {/*<DeleteUserModal*/}
-          {/*open={this.state.openModal}*/}
-          {/*handleClose={this.handleClose}*/}
-          {/*handleDelete={this.handleDeleteUsers}*/}
-          {/*users={usersList}*/}
-        {/*/>*/}
+        <DeleteUser
+          visible={this.state.openModal}
+          handleClose={this.handleClose}
+          handleDelete={this.handleDeleteUsers}
+          users={usersList}
+        />
       </div>
     );
   }
