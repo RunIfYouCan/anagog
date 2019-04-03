@@ -46,3 +46,6 @@ Credentials:
 name: admin
 password: admin
 ```
+
+## Notes
+I would like to use redux-saga for side-effects but i don't have much time to implement it. 
