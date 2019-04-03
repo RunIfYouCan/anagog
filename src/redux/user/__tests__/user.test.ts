@@ -36,6 +36,10 @@ const initialState = {
   usersList: [],
 };
 
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('User tests', () => {
   it('login action', () => {
     const store = mockStore();
@@ -84,7 +88,7 @@ describe('User tests', () => {
         payload: mockUser,
       }]);
 
-      expect(Api.loadUsers).toHaveBeenCalled();
+      expect(Api.addUser).toHaveBeenCalled();
     });
   });
 
@@ -123,7 +127,7 @@ describe('User tests', () => {
   it('handle LOAD_APP_USERS', () => {
     expect(reducer(undefined, {
       type: LOAD_APP_USERS,
-      payload: [mockUser]
+      payload: [mockUser],
     })).toEqual({
       ...initialState,
       usersList: [mockUser],

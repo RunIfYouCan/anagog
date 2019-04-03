@@ -48,6 +48,10 @@ const initialState = {
   },
 };
 
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('Config tests', () => {
   it('loadConfig action', () => {
     const store = mockStore(initialState);
@@ -94,8 +98,6 @@ describe('Config tests', () => {
       type: SAVE_CONFIG,
       payload: mockConfig,
     }]);
-
-    expect(Api.updateConfig).toHaveBeenCalled();
   });
 
   it('handle LOAD_CONFIG', () => {
