@@ -62,7 +62,7 @@ class ApplicationSelection extends Component<IProps, IState> {
     this.handleCloseModal();
   }
 
-  onConfigDownload = async (): Promise<void> => {
+  onConfigDownload = (): void => {
     if (!this.isAppSelected) {
       alert('Please choose Application');
 

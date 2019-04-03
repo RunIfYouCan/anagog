@@ -61,7 +61,7 @@ class AppForm extends Component<IProps, IState> {
     };
   }
 
-  getCurrentVersion(versions: IVersion[]) {
+  getCurrentVersion(versions: IVersion[]): IVersion {
     return versions.reduce((acc, v) => {
       const accDate = new Date(acc.Version);
       const vDate = new Date(v.Version);
