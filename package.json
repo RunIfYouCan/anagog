@@ -19,7 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "node_modules/tslint/bin/tslint 'src/**/*.ts*' -e 'src/**/*.test.ts'",
+    "lint": "node_modules/tslint/bin/tslint 'src/**/*.ts*' -e '**/__tests__/**'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
