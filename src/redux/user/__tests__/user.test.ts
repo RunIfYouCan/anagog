@@ -38,7 +38,7 @@ const initialState = {
 
 describe('User tests', () => {
   it('login action', () => {
-    const store = mockStore(initialState);
+    const store = mockStore();
 
     return store.dispatch(login('admin', 'admin')).then(() => {
       expect(store.getActions()).toEqual([{
@@ -51,7 +51,7 @@ describe('User tests', () => {
   });
 
   it('logout action', () => {
-    const store = mockStore(initialState);
+    const store = mockStore();
 
     return store.dispatch(logout()).then(() => {
       expect(store.getActions()).toEqual([{
@@ -63,7 +63,7 @@ describe('User tests', () => {
   });
 
   it('loadAppUsers action', () => {
-    const store = mockStore(initialState);
+    const store = mockStore();
 
     return store.dispatch(loadAppUsers('testApp')).then(() => {
       expect(store.getActions()).toEqual([{
@@ -76,7 +76,7 @@ describe('User tests', () => {
   });
 
   it('addUser action', () => {
-    const store = mockStore(initialState);
+    const store = mockStore();
 
     return store.dispatch(addUser('testApp', { name: mockUser.name })).then(() => {
       expect(store.getActions()).toEqual([{
@@ -89,7 +89,7 @@ describe('User tests', () => {
   });
 
   it('deleteUsers action', () => {
-    const store = mockStore(initialState);
+    const store = mockStore();
 
     return store.dispatch(deleteUsers('app', ['123'])).then(() => {
       expect(store.getActions()).toEqual([{
