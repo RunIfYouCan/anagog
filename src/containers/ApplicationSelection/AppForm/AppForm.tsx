@@ -37,8 +37,6 @@ class AppForm extends Component<IProps, IState> {
         selectedVersion: null,
         selectedBuild: null,
       });
-
-      return;
     }
   }
 
